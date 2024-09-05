@@ -33,7 +33,7 @@ yMusic is a powerful and user-friendly music streaming application that supports
 1. **Install Android Studio**: Download and install [Android Studio](https://developer.android.com/studio).
 2. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/ymusic-app.git
+   git clone https://github.com/geekeie/ymusic.git
    ```
 3. **Open the Project**: Open the project in Android Studio.
 4. **Build the APK**: Click on **Build** → **Build APK(s)** to generate the APK file.
@@ -50,7 +50,7 @@ yMusic is a powerful and user-friendly music streaming application that supports
    ```
 2. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/ymusic-app.git
+   git clone https://github.com/geekeie/ymusic.git
    cd ymusic-app
    ```
 3. **Build the APK**:
@@ -92,7 +92,7 @@ yMusic is a powerful and user-friendly music streaming application that supports
 2. **Install JDK**: Install Java Development Kit (JDK) from [here](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
 3. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/ymusic-app.git
+   git clone https://github.com/geekeie/ymusic.git
    ```
 4. **Open the Project**: Open yMusic in Android Studio.
 5. **Build the APK**: Click on **Build** → **Build APK(s)**.
@@ -120,10 +120,4 @@ We welcome contributions to improve yMusic! To contribute:
 
 ---
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
-
-### [Download yMusic Now](https://ymusicapk.cc)
