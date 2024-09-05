@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <title>YMusic</title>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="interest-cohort=(), user-id=()"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/design/app_icon.svg"
+    />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/multilingual.js"></script>
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/loadingScreen.js" defer></script>
+  </head>
+  <body class="is-boxed has-animations" ontouchstart="detecttouch()" onload="LoadingScreen.loaded()">
+    <div class="loadingScreen">
+      <div class="loader"></div>
+    </div>
+    <div class="body-wrap boxed-container">
+      <header class="site-header text-light">
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="#">
+                  <img
+                    class="header-logo-image"
+                    src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/design/app_icon.svg"
+                    width="50"
+                    alt="Logo"
+                  />
+                </a>
+              </h1>
+            </div>
+            <div style="align-items:right; text-align:right">
+              <svg class="focustoggle" onclick="toggleDark()" width="12.5mm" height="12.5mm" viewBox="0 0 13.261058 13.427273" version="1.1" id="toggledark" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><g id="layer1" transform="translate(-107.01,-171.72)"><path id="rect19" style="fill:none;stroke:var(--color);stroke-width:0.85;stroke-opacity:0.7" d="m 117.2,173.32 -9.89,9.89 z" /><path id="path19" style="fill:none;stroke:var(--color);stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:var(--moon)" d="m 112.85098,172.27247 c -4.3922,0.18726 -4.60114,5.76063 -2.44418,7.85042 l 2.83261,-2.83473 c -1.08989,-0.96811 -1.39424,-3.05427 -0.38843,-5.01569 z" /><path id="rect20-6" style="fill:none;stroke:var(--color);stroke-width:0.8;stroke-opacity:var(--sun)" d="m 111.88267,181.89664 -1.35482,1.35483 z" /><ellipse style="fill:none;fill-opacity:1;stroke:var(--color);stroke-width:0.9;stroke-opacity:var(--sun)" id="path14" cx="114.46501" cy="179.3551" rx="2.17" ry="2.17" /><path id="rect20" style="fill:none;stroke:var(--color);stroke-width:0.8;stroke-opacity:var(--sun)" d="m 114.45497,182.95789 v 2.15254 z" /><path id="rect20-2" style="fill:none;stroke:var(--color);stroke-width:0.8;stroke-opacity:var(--sun)" d="m 120.27499,179.32535 h -2.15254 z" /><path id="rect20-6-5" style="fill:none;stroke:var(--color);stroke-width:0.8;stroke-opacity:var(--sun)" d="m 118.37937,175.39995 -1.35482,1.35483 z" /><path id="rect20-6-3" style="fill:none;stroke:var(--color);stroke-width:0.8;stroke-opacity:var(--sun)" d="m 118.37937,183.25147 -1.35484,-1.35483 z" /></g></svg>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="hero text-center text-light">
+          <div class="hero-bg"></div>
+          <div class="hero-particles-container">
+            <canvas id="hero-particles"></canvas>
+          </div>
+          <div class="container-sm">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <!-- <h1 class="hero-title mt-0">RiMusic</h1> -->
+                <img
+                  src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/design/banner_tv_foreground.svg"
+                  width="400"
+                  style="display: inline-block"
+                />
+                <p class="hero-paragraph">
+                  [opensource_multilingual_application]
+                </p>
+                <div class="hero-cta-">
+                  <a href="https://github.com/fast4x/RiMusic/releases">
+                    <img
+                      src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItGithub.png"
+                      width="200"
+                      style="display: inline-block"
+                  /></a>
+                  <a
+                    href="https://apt.izzysoft.de/fdroid/index/apk/com.peecock.ymusic/"
+                  >
+                    <img
+                      src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItIzzyOnDroid.png"
+                      width="200"
+                      style="display: inline-block"
+                  /></a>
+                  <a href="https://f-droid.org/it/packages/com.peecock.ymusic/">
+                    <img
+                      src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItf-droid.png"
+                      width="200"
+                      style="display: inline-block"
+                  /></a>
+                  <a href="https://www.openapk.net/rimusic/com.peecock.ymusic/">
+                    <img
+                      src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItOpenapk.png"
+                      width="200"
+                      style="display: inline-block"
+                    /></a>
+                  <a href="https://accrescent.app/app/com.peecock.ymusic/">
+                    <img
+                            src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItAccrescent.png"
+                            width="200"
+                            style="display: inline-block"
+                    /></a>
+                </div>
+              </div>
+              <div class="mockup-container">
+                <div class="mockup-bg">
+                  <img src="images/hero-bg.svg" alt=" illustration" />
+                </div>
+                <img
+                  class="device-mockup"
+                  src="./images/Screenshots/640_1.jpg"
+                  srcset="./images/Screenshots/640_1.webp"
+                  alt="Homepage screenshot"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features-extended section">
+          <div class="features-extended-inner section-inner">
+            <div class="features-extended-wrap">
+              <div class="container">
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img
+                        src="./images/feature-bg-01.svg"
+                        alt=" Feature 01 illustration"
+                      />
+                    </div>
+                    <img
+                      class="device-mockup is-revealing"
+                      src="./images/Screenshots/640_2.jpg"
+                      srcset="./images/Screenshots/640_2.webp"
+                      alt="Library screenshot"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">[your_library]</h3>
+                    <p class="m-0">[organized_in_one_place]</p>
+                  </div>
+                </div>
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img
+                        src="./images/feature-bg-02.svg"
+                        alt=" Feature 02 illustration"
+                      />
+                    </div>
+                    <img
+                      class="device-mockup is-revealing"
+                      src="./images/Screenshots/640_3.jpg"
+                      srcset="./images/Screenshots/640_3.webp"
+                      alt="Player screenshot"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">[beautiful_player]</h3>
+                    <p class="m-0">[listen_songs_sing_lyrics]</p>
+                  </div>
+                </div>
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img
+                        src="./images/feature-bg-03.svg"
+                        alt=" Feature 03 illustration"
+                      />
+                    </div>
+                    <img
+                      class="device-mockup is-revealing"
+                      src="./images/Screenshots/640_4.jpg"
+                      srcset="./images/Screenshots/640_4.webp"
+                      alt="Player screenshot"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">[many_effects]</h3>
+                    <p class="m-0">[visualizer_preview_timeline]</p>
+                  </div>
+                </div>
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img
+                        src="./images/feature-bg-04.svg"
+                        alt=" Feature 04 illustration"
+                      />
+                    </div>
+                    <img
+                      class="device-mockup is-revealing"
+                      src="./images/Screenshots/640_5.jpg"
+                      srcset="./images/Screenshots/640_5.webp"
+                      alt="Player screenshot"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">[modern]</h3>
+                    <p class="m-0">[YMusic_is_multilingual_modern_powerful]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-particles-container">
+          <canvas id="footer-particles"></canvas>
+        </div>
+        <div class="site-footer-top">
+          <section class="cta section text-light">
+            <div class="container-sm">
+              <div class="cta-inner section-inner">
+                <div class="cta-header text-center">
+                  <h2 class="section-title mt-0">
+                    [listen_to_your_favourite_music]
+                  </h2>
+                  <p class="section-paragraph">[download_ymusic_now]</p>
+                  <div class="cta-cta">
+                    <a href="https://github.com/fast4x/RiMusic/releases">
+                      <img
+                        src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItGithub.png"
+                        width="200"
+                        style="display: inline-block"
+                    /></a>
+                    <a
+                      href="https://apt.izzysoft.de/fdroid/index/apk/com.peecock.ymusic/"
+                    >
+                      <img
+                        src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItIzzyOnDroid.png"
+                        width="200"
+                        style="display: inline-block"
+                    /></a>
+                    <a
+                      href="https://f-droid.org/it/packages/com.peecock.ymusic/"
+                    >
+                      <img
+                        src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItf-droid.png"
+                        width="200"
+                        style="display: inline-block"
+                    /></a>
+                    <a
+                            href="https://www.openapk.net/rimusic/com.peecock.ymusic/"
+                    >
+                      <img
+                              src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItOpenapk.png"
+                              width="200"
+                              style="display: inline-block"
+                      /></a>
+                    <a href="https://accrescent.app/app/com.peecock.ymusic/">
+                      <img
+                              src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/images/getItAccrescent.png"
+                              width="200"
+                              style="display: inline-block"
+                      /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="site-footer-bottom">
+          <div class="container">
+            <div class="site-footer-inner">
+              <div class="brand footer-brand">
+                <a href="#">
+                  <img
+                    src="https://raw.githubusercontent.com/fast4x/RiMusic/master/assets/design/app_icon.svg"
+                    width="50"
+                    alt="YMusic logo"
+                  />
+                </a>
+              </div>
+              <ul class="footer-links list-reset">
+                <li>
+                  <a href="https://ymusicapk.cc">[Official Website]</a>
+                </li>
+                <li>
+                  <a href="https://github.com/fast4x/RiMusic">[repository]</a>
+                </li>
+                <li>
+                  <a href="https://github.com/fast4x/RiMusic/releases"
+                    >[releases]</a
+                  >
+                </li>
+                <li>
+                  <a href="https://github.com/fast4x/RiMusic/issues"
+                    >[issue_tracker]</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/fast4x/RiMusic/tree/master/customVersion"
+                    >[custom_version]</a
+                  >
+                </li>
+                <li>
+                  <select
+                    id="languageSelect"
+                    onchange="multilingual.updateLanguage(this)"
+                  >
+                    <option value="bn">বাংলা</option>
+                    <option value="zh-rCN">简体中文</option>
+                    <option value="zh-rTW">繁體中文</option>
+                    <option value="ca">Català</option>
+                    <option value="cs">Čeština</option>
+                    <option value="da">Dansk</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="et">Eesti</option>
+                    <option value="fi">Finnish</option>
+                    <option value="fil">Tagalog</option>
+                    <option value="fr">Français</option>
+                    <option value="he">עִבְרִית</option>
+                    <option value="hu">Magyar</option>
+                    <option value="it">Italiano</option>
+                    <option value="ko">한국어</option>
+                    <option value="nl">Nederlands</option>    
+                    <option value="pl">język polski</option>
+                    <option value="pt-rBR">Português Brasileiro</option>
+                    <option value="ru">Русский</option>
+                    <option value="ro">Română</option>
+                    <option value="sr">српски</option>
+                    <option value="sr-rCS">Srpski</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="uk">Українська</option>
+                  </select>
+                </li>
+              </ul>
+              <ul class="footer-social-links list-reset">
+                <li>
+                  <a href="https://github.com/fast4x/RiMusic">
+                    <img
+                      src="./images/github-mark-white.png"
+                      width="30"
+                      height="30"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/rimusic_app">
+                    <img
+                            src="./images/telegram-black-icon.png"
+                            width="30"
+                            height="30"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/rimusic_app">
+                    <img
+                            src="./images/telegram-white-icon.png"
+                            width="30"
+                            height="30"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <div class="footer-copyright">2023/2024 RiMusic</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+    <script>
+      // Load the locales
+      const multilingual = new Multilingual(["en", "cs", "it", "es", "fi", "fr", "pt-rBR", "ru", "ro", "tr", "zh-rCN", "zh-rTW", "da", "de", "et", "fil", "nl","sr","sr-rCS","uk","he","hu","ko","bn","pl","ca"]);
+      (async () => {
+        await multilingual.loadStrings();
+        multilingual.updateDom();
+        multilingual.loadLanguageSelectInput(
+          document.querySelector("#languageSelect"),
+        );
+        multilingual.setAttribute(document.documentElement)
+      })();
+    </script>
+  </body>
+</html>

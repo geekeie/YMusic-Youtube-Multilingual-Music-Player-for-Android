@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="opensource_multilingual_application">Eine quelloffene und mehrsprachige Android App zum Streamen von Musik von YouTube Music</string>
+    <string name="your_library">Deine Bibliothek.</string>
+    <string name="organized_in_one_place">Alles an einem Ort organisiert: Lieblingslieder, heruntergeladene und gehörte Lieder sowie all deine Wiedergabelisten.</string>
+    <string name="beautiful_player">Ein schöner Mu­sik­play­er.</string>
+    <string name="listen_songs_sing_lyrics">Höre Lieder, singe mit Liedtexten, übersetze Wörter mit dem eingebauten Übersetzer.</string>
+    <string name="many_effects">Viele Effekte.</string>
+    <string name="visualizer_preview_timeline">Passe die Effekte deinen Wünschen an: Visualizer, Vorschau, Zeitleiste, Wiedergabetaste und mehr.</string>
+    <string name="modern">Modern.</string>
+    <string name="rimusic_is_multilingual_modern_powerful">RiMusic ist mehrsprachig, modern, leistungsstark, attraktiv, schön und wird von Projektbeteiligten in verschiedene Sprachen übersetzt.</string>
+    <string name="listen_to_your_favourite_music">Höre deine Lieblingsmusik</string>
+    <string name="download_rimusic_now">RiMusic jetzt herunterladen.</string>
+    <string name="repository">Repository</string>
+    <string name="releases">Veröffentlichungen</string>
+    <string name="issue_tracker">Issue Tracker</string>
+    <string name="custom_version">Angepasste Version</string>
+</resources>

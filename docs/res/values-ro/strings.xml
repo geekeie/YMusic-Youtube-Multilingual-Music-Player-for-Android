@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="opensource_multilingual_application">O aplicație Android open-source și multilingvă pentru streaming de muzică de pe YouTube Music</string>
+    <string name="your_library">Biblioteca ta.</string>
+    <string name="organized_in_one_place">Totul organizat într-un singur loc: melodiile preferate, melodiile descărcate, melodiile ascultate și toate playlist-urile tale.</string>
+    <string name="beautiful_player">Un player frumos.</string>
+    <string name="listen_songs_sing_lyrics">Ascultă melodii, cântă versurile și traduce cuvinte cu ajutorul traducătorului încorporat.</string>
+    <string name="many_effects">Multe efecte.</string>
+    <string name="visualizer_preview_timeline">Aplicați efectele preferate: vizualizator, previzualizare, cronologie, buton de redare.</string>
+    <string name="modern">Modern.</string>
+    <string name="rimusic_is_multilingual_modern_powerful">RiMusic este multilingv, modern, puternic, atractiv, frumos și este tradus în diferite limbi de către colaboratorii proiectului.</string>
+    <string name="listen_to_your_favourite_music">Ascultă-ți melodiile preferate</string>
+    <string name="download_rimusic_now">Descarcă RiMusic Acum.</string>
+    <string name="repository">Depozit</string>
+    <string name="releases">Versiuni</string>
+    <string name="issue_tracker">Tracker de probleme</string>
+    <string name="custom_version">Versiune personalizată</string>
+</resources>

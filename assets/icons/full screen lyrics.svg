@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512.00006"
+   height="512.00006"
+   viewBox="0 0 512.00006 512.00006"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="full screen lyrics.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.76855469"
+     inkscape:cx="225.74841"
+     inkscape:cy="184.11182"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     id="polyline4"
+     style="fill:none;stroke:#000000;stroke-width:42.6667px;stroke-linecap:round;stroke-linejoin:round"
+     d="M 490.66669,341.33335 V 490.66669 H 341.33335 m -320.000001,-320 V 21.333349 H 170.66669 M 34.973349,477.06669 192.00002,320.00002 M 170.66669,490.66669 H 21.333349 V 341.33335 M 477.02667,34.933363 320.00002,192.00002 M 341.33335,21.333349 H 490.66669 V 170.66669" />
+</svg>

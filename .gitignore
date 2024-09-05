@@ -1,0 +1,18 @@
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/APK keystore/RiMusicKeystore.jks
+/APK keystore/pwd key.txt
+/crowdin.properties
+/__crowdin.properties
+/APK keystore/fdroid_metadata_com.peecock.ymusic.yml
+/YT python/
+/lrclib/build/
+/piped/build/

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="search"
+        android:enabled="true"
+        android:icon="@drawable/search"
+        android:shortcutShortLabel="@string/search">
+        <intent
+            android:targetClass="com.peecock.ymusic.MainActivity"
+            android:targetPackage="com.peecock.ymusic"
+            android:action="com.peecock.ymusic.action.search" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="songs"
+        android:enabled="true"
+        android:icon="@drawable/disc"
+        android:shortcutShortLabel="@string/songs">
+        <intent
+            android:targetClass="com.peecock.ymusic.MainActivity"
+            android:targetPackage="com.peecock.ymusic"
+            android:action="com.peecock.ymusic.action.songs" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="albums"
+        android:enabled="true"
+        android:icon="@drawable/alternative_version"
+        android:shortcutShortLabel="@string/albums">
+        <intent
+            android:targetClass="com.peecock.ymusic.MainActivity"
+            android:targetPackage="com.peecock.ymusic"
+            android:action="com.peecock.ymusic.action.albums" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="library"
+        android:enabled="true"
+        android:icon="@drawable/playlist"
+        android:shortcutShortLabel="@string/playlists">
+        <intent
+            android:targetClass="com.peecock.ymusic.MainActivity"
+            android:targetPackage="com.peecock.ymusic"
+            android:action="com.peecock.ymusic.action.library" />
+    </shortcut>
+</shortcuts>

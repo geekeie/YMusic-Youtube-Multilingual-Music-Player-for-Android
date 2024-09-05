@@ -1,0 +1,222 @@
+package com.peecock.ymusic.ui.components.themed
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+import androidx.media3.common.util.UnstableApi
+import coil.compose.AsyncImage
+import com.valentinilk.shimmer.shimmer
+import com.peecock.ymusic.R
+import com.peecock.ymusic.enums.PlayerThumbnailSize
+import com.peecock.ymusic.ui.styling.LocalAppearance
+import com.peecock.ymusic.ui.styling.px
+import com.peecock.ymusic.ui.styling.shimmer
+import com.peecock.ymusic.utils.isLandscape
+import com.peecock.ymusic.utils.playerThumbnailSizeKey
+import com.peecock.ymusic.utils.rememberPreference
+import com.peecock.ymusic.utils.thumbnail
+
+
+@Composable
+inline fun LayoutWithAdaptiveThumbnail(
+    thumbnailContent: @Composable () -> Unit,
+    content: @Composable () -> Unit
+) {
+    val isLandscape = isLandscape
+
+    if (isLandscape) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            thumbnailContent()
+            content()
+        }
+    } else {
+        content()
+    }
+}
+
+@UnstableApi
+fun adaptiveThumbnailContent(
+    isLoading: Boolean,
+    url: String?,
+    shape: Shape? = null,
+    showIcon: Boolean? = false,
+    onOtherVersionAvailable: (() -> Unit)? = {},
+    onClick: (() -> Unit)? = {}
+): @Composable () -> Unit = {
+    val (colorPalette, _, thumbnailShape) = LocalAppearance.current
+
+    BoxWithConstraints(contentAlignment = Alignment.Center) {
+        val thumbnailSizeDp = if (isLandscape) (maxHeight - 128.dp) else (maxWidth - 64.dp)
+        val thumbnailSizePx = thumbnailSizeDp.px
+        val context = LocalContext.current
+        val playerThumbnailSize by rememberPreference(playerThumbnailSizeKey, PlayerThumbnailSize.Medium)
+
+        val modifier = Modifier
+            //.padding(all = 16.dp)
+            .padding(horizontal = playerThumbnailSize.size.dp)
+            .padding(top = 16.dp)
+            .clip(shape ?: thumbnailShape)
+            .clickable {
+                if (onClick != null) {
+                    onClick()
+                }
+            }
+            //.size(thumbnailSizeDp)
+
+        //val painter = rememberAsyncImagePainter(
+        //    model = url?.thumbnail(thumbnailSizePx),
+        //)
+
+        /*
+        val painter = rememberAsyncImagePainter(
+            model = ImageRequest.Builder(LocalContext.current)
+                .data(url)
+                .size(coil.size.Size.ORIGINAL)
+                .build()
+        )
+
+        var bitmap = remember<Bitmap?> {
+            null
+        }
+        val imageState = painter.state
+        */
+        /*
+        val scaledBitmap = remember {
+            bitmap?.asImageBitmap()?.let {
+                Bitmap.createScaledBitmap(
+                    it.asAndroidBitmap(),
+                    thumbnailSizePx,
+                    thumbnailSizePx,
+                    false
+                )
+                    //.asImageBitmap()
+            }
+        }
+         */
+
+        /*
+        var isExporting by remember {
+            mutableStateOf(false)
+        }
+
+        val exportLauncher =
+            rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
+                if (uri == null) return@rememberLauncherForActivityResult
+
+                context.applicationContext.contentResolver.openOutputStream(uri)
+                    ?.use { outputStream ->
+                        if (imageState is AsyncImagePainter.State.Success) {
+                            bitmap = imageState.result.drawable.toBitmap()
+                            try {
+                                bitmap?.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+                                outputStream.flush()
+                                outputStream.close()
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                                context.toast("Error")
+                            }
+                        } else context.toast("Error")
+                    }
+
+            }
+
+         */
+
+        /*
+        if (isExporting) {
+            InputTextDialog(
+                onDismiss = {
+                    isExporting = false
+                },
+                title = stringResource(R.string.enter_the_playlist_name),
+                value = "",
+                placeholder = stringResource(R.string.enter_the_playlist_name),
+                setValue = { text ->
+                    if(isExporting) {
+                        try {
+                            @SuppressLint("SimpleDateFormat")
+                            val dateFormat = SimpleDateFormat("yyyyMMddHHmmss")
+                            exportLauncher.launch("imageCover${text.take(20)}_${dateFormat.format(
+                                Date()
+                            )}")
+                        } catch (e: ActivityNotFoundException) {
+                            context.toast("Couldn't find an application to create documents")
+                        }
+                    }
+
+                }
+            )
+        }
+         */
+
+        if (isLoading) {
+            Spacer(
+                modifier = modifier
+                    .shimmer()
+                    .background(colorPalette.shimmer)
+            )
+        } else {
+            AsyncImage(
+                model = url?.thumbnail(thumbnailSizePx),
+                contentDescription = null,
+                modifier = modifier
+            )
+            if(showIcon == true)
+                onOtherVersionAvailable?.let {
+                    Box(
+                        modifier = modifier
+                            .align(Alignment.BottomEnd)
+                            .fillMaxWidth(0.2f)
+                    ) {
+                        HeaderIconButton(
+                            icon = R.drawable.alternative_version,
+                            color = colorPalette.text,
+                            onClick = {
+                                onOtherVersionAvailable()
+                            },
+                            modifier = Modifier.size(35.dp)
+                        )
+                    }
+                }
+            /*
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .fillMaxWidth(0.2f)
+            ) {
+                HeaderIconButton(
+                    icon = R.drawable.image_download,
+                    color = colorPalette.text,
+                    onClick = {
+                        //isExporting = true
+                        try {
+                            @SuppressLint("SimpleDateFormat")
+                            val dateFormat = SimpleDateFormat("yyyyMMddHHmmss")
+                            exportLauncher.launch("ImageCover_${dateFormat.format(
+                                Date()
+                            )}")
+                        } catch (e: ActivityNotFoundException) {
+                            context.toast("Couldn't find an application to create documents")
+                        }
+                    },
+                    modifier = Modifier.size(35.dp)
+                )
+            }
+             */
+        }
+    }
+}
