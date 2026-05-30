@@ -16,6 +16,7 @@ yMusic APk is a powerful and user-friendly music streaming application that supp
 - **High-Quality Streaming**: Experience crisp and clear music with high-quality audio streaming.
 - **Custom Playlists**: Create and manage your personalized playlists to organize your favorite songs.
 - **Lightweight and Fast**: A lightweight app designed to offer high performance even on low-spec devices.
+* **Offline Mode**: Download music for offline listening and enjoy your favorite tracks without an internet connection. Similarly, users who prefer offline reading can use [epubreaderpro.com](https://www.epubreaderpro.com) to access and read EPUB ebooks conveniently online on all devices.
 
 ---
 
@@ -23,7 +24,7 @@ yMusic APk is a powerful and user-friendly music streaming application that supp
 
 ### 1. Android
 #### Steps to Install via APK:
-1. **Download the APK**: Get the latest APK from the [official website](https://ymusicapk.cc) and want more premium android apps then visit [APK Venom Official](https://apk-venom.com)
+1. **Download the APK**: Get the latest APK from the [official website](https://ymusicapk.cc)
 2. **Allow App Installation from Unknown Sources**:
    - Go to Android settings → Security → Enable "Install from Unknown Sources."
 3. **Install the APK**: Open the downloaded APK and follow the prompts to install it.
@@ -119,5 +120,10 @@ We welcome contributions to improve yMusic! To contribute:
 4. Submit a pull request.
 
 ---
+## Useful Resources
+
+* Android Studio: https://developer.android.com/studio
+* Java JDK: https://www.oracle.com/java/
+* EPUB Reader: https://www.epubreaderpro.com
 
 ---
