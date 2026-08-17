@@ -3,7 +3,7 @@
 
 yMusic APk is a powerful and user-friendly music streaming application that supports multiple languages, offers a modern interface, and includes essential features such as background play. It's designed to provide a seamless experience for music lovers worldwide.
 
-### [Download YMusic APK]([https://ymusicapk.cc](https://apkvenom.cc/ymusic-apk/))
+### [Download YMusic APK](https://apkvenom.cc/ymusic-apk/)
 
 ---
 
