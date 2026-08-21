@@ -150,12 +150,21 @@ data class Context(
             )
         )
 
+        val IOS = Context(
+            client = Client(
+                clientName = "IOS",
+                clientVersion = "19.28.1",
+                api_key = "ELITE_GOOGLE_API_KEY_PLACEHOLDER",
+                userAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+            )
+        )
+
         val TVHTML5 = Context(
             client = Client(
-                clientName = "TVHTML5_SIMPLY_EMBEDDED_PLAYER",
-                clientVersion = "2.0",
-                api_key = "AIzaSyDCU8hByM-4DrUqRUYnGn-3llEO78bcxq8",
-                userAgent = "Mozilla/5.0 (PlayStation 4 5.55) AppleWebKit/601.2 (KHTML, like Gecko)"
+                clientName = "TVHTML5",
+                clientVersion = "7.20230101",
+                api_key = "ELITE_GOOGLE_API_KEY_PLACEHOLDER",
+                userAgent = "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36"
             )
         )
 
